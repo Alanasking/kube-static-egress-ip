@@ -30,6 +30,10 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
+            - name: MIN_ROUTE_TABLES_ID
+              value: "30000"
+            - name: MAX_ROUTE_TABLE_ID
+              value: "32765"
           resources:
             requests:
               cpu: 250m
