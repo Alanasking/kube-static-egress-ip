@@ -57,3 +57,10 @@ spec:
         - name: iproute2
           hostPath:
             path: /etc/iproute2
+        - name: xtables-lock
+          hostPath:
+            path: /run/xtables.lock
+            type: FileOrCreate
+        - name: egress-dir
+          hostPath:
+             path: /opt/egressip
