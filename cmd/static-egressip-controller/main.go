@@ -50,6 +50,8 @@ func main() {
 		//chang iptables mode to nf_tables when os type is redhat8.4
 		changeIptablesMode()
 	}
+
+	//原生仅支持一个egress ip，为支持多条egress ip需要配置多个策略路由，30000到32765是egress下发策略路由ID的范围
 	minRouteTableId := 30000
 	minIdStr := os.Getenv("MIN_ROUTE_TABLES_ID")
 	if minIdStr != "" [
